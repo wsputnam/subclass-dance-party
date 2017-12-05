@@ -39,7 +39,7 @@ Dancer.prototype.setPosition = function(top, left) {
 
 Dancer.prototype.setLinePosition = function(arr) {
   var styleSettings = {
-    top: 625
+    top: 630
   };
   this.$node.css(styleSettings);
 };

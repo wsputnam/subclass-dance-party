@@ -15,19 +15,17 @@ body, a:link, a:visited, a:active{
 .title, .addDancerButton, .getRickRollin, .lineUp, .TrumpShaking, .KimShaking, .interact {
   padding:5px 12px;
   float:right;
+  background-color: #1E90FF;
+  opacity: .8;
 }
 
 .fighter {
   border-radius:50%;
 }
 
-.topbar: {
-  background-color: black;
-  height:200px;
-}
 
 .title, .topbar{
-  background-color: black;
+  background-color: #228B22;
 }
 
 .dancer{
@@ -44,7 +42,7 @@ body, a:link, a:visited, a:active{
 }
 
 #rickFace {
-  height: 200px;
+  height: 180px;
   padding: 10%;
 }
 

@@ -39,11 +39,12 @@ $(document).ready(function() {
   $('.lineUp').on('click', function(event) {
 
     window.dancers.map(function(dancer) {
-      // if dancer is of shakedancer class, stop the shake
       dancer.setLinePosition();
     });
   });
 
+
+// bug on lineup situations
   $('.interact').on('click', function(fight) {
     var pythagorasArray = [];
     var result;
@@ -53,7 +54,7 @@ $(document).ready(function() {
         if (j !== i) {
           result = Dancer.prototype.calculateDistance(window.dancers[j].top, window.dancers[j].left, window.dancers[i].top, window.dancers[i].left);
         }
-        if (result < 100) {
+        if (result < 300) {
           pythagorasArray.push(window.dancers[j]);
           i = window.dancers.length;
         }
@@ -67,8 +68,6 @@ $(document).ready(function() {
         img.toggle('scale', {'origin': ['middle', 'center'], 'percent': 1000});
       }
     });
-    // $('.fighter').toggle();
-    // $('.fighter').toggle('scale', {'origin': ['middle', 'center'], 'percent': 90000});
   });
 
 });
