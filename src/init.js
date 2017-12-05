@@ -12,9 +12,9 @@ $(document).ready(function() {
   // make a dancer with a random position
 
     var dancer = new dancerMakerFunction(
-      $('.island').height() * Math.random()*0.80,
-      $('.island').width() * Math.random()*0.75,
-      Math.random() * 2000
+      $('.island').height() * Math.random() * 0.80,
+      $('.island').width() * Math.random() * 0.75,
+      Math.random() * 3000
     );
     window.dancers.push(dancer);
     $('.island').append(dancer.$node);
@@ -31,7 +31,26 @@ $(document).ready(function() {
     rickAudio.pause('audio');
   });
 
+  $('.lineUp').on('click', function(event) {
+
+    window.dancers.map(function(dancer) {
+      // if dancer is of shakedancer class, stop the shake
+      dancer.setLinePosition();
+    });
+  });
+
 });
+
+    // var styleSettings = {
+    //   left: 0,
+    //   top: 200,
+    //   position: 'absolute'
+    // };
+
+    // for (var i = 0; i < window.dancers.length; i++) {
+    //   styleSettings.left = i * 50;
+    //   $('.kimDancer, .trumpDancer, .rickDancer').css(styleSettings);
+    // }
 
 
 // $('.addDancerButton').on('click', function(event) {

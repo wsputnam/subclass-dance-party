@@ -16,12 +16,12 @@ body, a:link, a:visited, a:active{
 }
 
 .topbar: {
-  background-color: #555;
-  height:32px;
+  background-color: black;
+  height:200px;
 }
 
 .title{
-  background-color: #777;
+
 }
 
 .dancer{
