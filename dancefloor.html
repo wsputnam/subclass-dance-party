@@ -4,16 +4,35 @@
     <title>Object Dance Party</title>
     <link rel="stylesheet" type="text/css" href="styles.css" />
     <script src="lib/jquery.js"></script>
+    <script src="lib/jquery-ui.js"></script>
+    <script src="lib/jquery-ui.css"></script>
     <script src="src/dancer.js"></script>
     <script src="src/blinkyDancer.js"></script>
     <script src="src/RickAstley.js"></script>
+    <script src="src/shakeDancer.js"></script>
+    <script src="src/Kim.js"></script>
+    <script src="src/Trump.js"></script>
   </head>
   <body>
-    <div class="topbar">
-      <span class="title">object dance party</span>
-      <a href="#" class="addDancerButton" data-dancer-maker-function-name="BlinkyDancer">add a blinky dancer</a>    
-      <a href="#" class="getRickRollin" data-dancer-maker-function-name="RickAstley">awesome dance moves!!!</a>
-    </div>
+   <header>
+     <div class="topbar">
+       <div class="rickaudio">
+        <audio src="./media/Never.mp3" preload="auto"></audio>
+        </div>
+        <span class="title">object dance party</span>
+        <!-- <a href="#" class="addDancerButton" data-dancer-maker-function-name="BlinkyDancer">add a blinky dancer</a>   -->  
+        <a href="#" class="getRickRollin" data-dancer-maker-function-name="RickAstley">awesome dance moves!!!</a>
+        <a href="#" class="TrumpShaking" data-dancer-maker-function-name="Trump">Deploy Our Fearless Leader</a>
+        <a href="#" class="KimShaking" data-dancer-maker-function-name="Kim">The Supreme People's Assembly</a>
+       <a href="#" class="lineUp" data-dancer-maker-function-name="#">Line up!</a>
+       </div>
+       <div class="rickaudio">
+       <audio src="./media/Never.mp3" preload="auto"></audio>
+      </div>
+  </header>
+
+  <div class="island" id="song"></div>
+  
     <script src="src/init.js"></script>
   </body>
 </html>

@@ -1,34 +1,48 @@
-body, html{
+body, html, .island{
   height:100%;
 }
 body{
   margin: 0px;
-  background-color:#444;
+  background-image: url('./media/beach.jpg');
   font-size: 18px;
 }
 body, a:link, a:visited, a:active{
   color: lightblue;
 }
-.title, .addDancerButton, .getRickRollin{
+
+.title, .addDancerButton, .getRickRollin, .lineUp, .TrumpShaking, .KimShaking {
   padding:5px 12px;
   float:right;
 }
 
-
-.topbar{
-  height:32px;
+.topbar: {
   background-color: #555;
+  height:32px;
 }
+
 .title{
   background-color: #777;
 }
+
 .dancer{
-  border:10px solid red;
   border-radius:10px;
   position:absolute;
 }
-.face {
-  height: 300px;
-  position:absolute;
 
+.kimDancer, .trumpDancer {
+  position: absolute;
+}
+
+.kimFace, .trumpFace {
+  height:200px;
+}
+
+#rickFace {
+  height: 200px;
+  padding: 10%;
+}
+
+#rickDancer {
+  position: absolute;
+  
 }
