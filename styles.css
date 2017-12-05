@@ -14,7 +14,7 @@ body, a:link, a:visited, a:active{
 
 .title, .addDancerButton, .getRickRollin, .lineUp, .TrumpShaking, .KimShaking, .interact {
   padding:5px 12px;
-  float:right;
+  float:left;
   background-color: #1E90FF;
   opacity: .8;
 }
@@ -33,10 +33,6 @@ body, a:link, a:visited, a:active{
   position:absolute;
 }
 
-.kimDancer, .trumpDancer {
-  position: absolute;
-}
-
 .kimFace, .trumpFace {
   height:200px;
 }
@@ -44,9 +40,4 @@ body, a:link, a:visited, a:active{
 #rickFace {
   height: 180px;
   padding: 10%;
-}
-
-#rickDancer {
-  position: absolute;
-  
 }

@@ -30,5 +30,6 @@ describe('shakeDancer', function() {
       clock.tick(timeBetweenSteps);
       expect(shakeDancer.step.callCount).to.be.equal(2);
     });
+
   });
 });
