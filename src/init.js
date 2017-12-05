@@ -20,15 +20,20 @@ $(document).ready(function() {
     $('.island').append(dancer.$node);
   });
 
-  var rickHover = $('#rickFace');
+  var rickHover = $('#rickDancer').find('#rickFace');
   var sound = $('.topbar');
   var rickAudio = sound.find('audio')[0];
 
-  rickHover.hover(function() {
+  // rickHover.hover(function() {
+  //   rickAudio.play('audio');
+  //   console.log('rick rolling');
+  // }, function() {
+  //   rickAudio.pause('audio');
+  // });
+
+  $('body').on('click', '#rickFace', function() {
     rickAudio.play('audio');
     console.log('rick rolling');
-  }, function() {
-    rickAudio.pause('audio');
   });
 
   $('.lineUp').on('click', function(event) {
@@ -39,7 +44,36 @@ $(document).ready(function() {
     });
   });
 
+  $('.interact').on('click', function(fight) {
+    var pythagorasArray = [];
+    var result;
+    
+    for (var j = 0; j < window.dancers.length; j++) {
+      for (var i = 0; i < window.dancers.length; i++) {
+        if (j !== i) {
+          result = Dancer.prototype.calculateDistance(window.dancers[j].top, window.dancers[j].left, window.dancers[i].top, window.dancers[i].left);
+        }
+        if (result < 100) {
+          pythagorasArray.push(window.dancers[j]);
+          i = window.dancers.length;
+        }
+      }
+    }
+    // loop through pythagoras array and begin fighting animation
+    pythagorasArray.map(function(dancer) {
+      if (dancer.$node.hasClass('kimDancer') || dancer.$node.hasClass('trumpDancer')) {
+        dancer.$node.addClass('fighter'); 
+        var img = $('.fighter').find('img');
+        img.toggle('scale', {'origin': ['middle', 'center'], 'percent': 1000});
+      }
+    });
+    // $('.fighter').toggle();
+    // $('.fighter').toggle('scale', {'origin': ['middle', 'center'], 'percent': 90000});
+  });
+
 });
+
+
 
     // var styleSettings = {
     //   left: 0,

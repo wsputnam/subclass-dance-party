@@ -42,7 +42,10 @@ Dancer.prototype.setLinePosition = function(arr) {
     top: 625
   };
   this.$node.css(styleSettings);
+};
 
+Dancer.prototype.calculateDistance = function(dancerTop, dancerLeft, otherDancerTop, otherDancerLeft) {
+  return Math.sqrt(Math.pow((otherDancerLeft - dancerLeft), 2) + Math.pow((otherDancerTop - dancerTop), 2));
 
 };
 
