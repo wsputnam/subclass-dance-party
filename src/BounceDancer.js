@@ -1,10 +1,8 @@
-var BounceDancer = function(top, left, timeBetweenSteps) {
-  Dancer.call(this, top, left, timeBetweenSteps);
-
-};
-
-BounceDancer.prototype = Object.create(Dancer.prototype);
-BounceDancer.prototype.constructor = BounceDancer;
+class BounceDancer extends Dancer {
+  constructor(top, left, timeBetweenSteps) {
+    super(top, left, timeBetweenSteps);
+  }
+}
 
 BounceDancer.prototype.step = function() {
   Dancer.prototype.step.call(this);
